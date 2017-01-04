@@ -2182,7 +2182,7 @@ An xvalue of type
 ``\cvqual{cv1} \tcode{B}'' can be cast to type ``rvalue reference to
 \cvqual{cv2} \tcode{D}'' with the same constraints as for an lvalue of
 type ``\cvqual{cv1} \tcode{B}''. If the object
-of type ``\cvqual{cv1} \tcode{B}'' is actually a subobject of an object
+of type ``\cvqual{cv1} \tcode{B}'' is actually a base class subobject of an object
 of type \tcode{D}, the result refers to the enclosing object of type
 \tcode{D}. Otherwise, the behavior is undefined.
 \begin{example}
@@ -2319,7 +2319,7 @@ to ``pointer to \tcode{B}'' exists~(\ref{conv.ptr}), the program is ill-formed.
 The null pointer value~(\ref{conv.ptr}) is converted
 to the null pointer value of the destination type. If the prvalue of type
 ``pointer to \cvqual{cv1} \tcode{B}'' points to a \tcode{B} that is
-actually a subobject of an object of type \tcode{D}, the resulting
+actually a base class subobject of an object of type \tcode{D}, the resulting
 pointer points to the enclosing object of type \tcode{D}. Otherwise, the
 behavior is undefined.
 
